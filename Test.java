@@ -1,14 +1,13 @@
 public class Test{
 	public static void main(String[] args) {
-		
-		Car c1 = new Car("White",5,1500000);
-		System.out.println(c1); // c1.toString()
-		
-        System.out.println();
 
-		Car c2 = new Car("Black",4,100000);
-		System.out.println(c2); // c2.toString()
-		
-       
+		Student s1 = new Student(123,"ABC",7.9,"DASSD");
+		s1.getStudent(); //123 ABC 7.9 DASSD C-DAC
+
+		Student.changeOrg();  // Class Name
+
+		Student s2 = new Student(321,"XYZ",8.9,"DAC");
+		s2.getStudent(); //
+		     
 	}
 } 
