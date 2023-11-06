@@ -1,11 +1,11 @@
 public class TechEmp extends Emp{
 
-	private final int BONUS = 10000;
+	private int BONUS;  
     
-    // all non - private members
-	// setEmp();
-	// getEmp()
-	//calSalary()
+    public TechEmp(int eid, String name, double basic, int BONUS){
+           super(eid, name, basic); // invoking the parent class cons
+           this.BONUS = BONUS;
+    }
     
     //  redefining by adding bonus 
 	public void getEmp(){
@@ -22,7 +22,5 @@ public class TechEmp extends Emp{
     	double salary = basicSalary + da*basicSalary + hra*basicSalary + ta*basicSalary+BONUS;
     	System.out.println("Salary: "+salary);
     }
-     
-
-
+  
 }

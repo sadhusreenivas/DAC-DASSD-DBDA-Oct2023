@@ -4,7 +4,7 @@ public class Emp{
 	protected double basicSalary;
 	private static String company = "C-DAC";
 
-	public void setEmp(int eid, String name, double basicSalary){
+	public Emp(int eid, String name, double basicSalary){
 		this.eid = eid;
 		this.name = name;
 		this.basicSalary = basicSalary;
