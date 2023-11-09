@@ -15,12 +15,17 @@ public class BRDemo{
         try{
         age = Integer.parseInt(br.readLine());   // throw new NumberFormatException();
         }
-        catch(Exception e){
+        catch(ArithmeticException e){
          System.err.println(e);
          System.err.println();
          e.printStackTrace();
         }
-
+        finally{
+        	if(br!=null)
+        		br.close();
+        	System.out.println("Resource closed: BR");
+        }
+   
         System.out.println("Name: "+name+"\tAge: "+age);
 
         System.out.println("Rest of the code follows...............");
