@@ -1,13 +1,22 @@
+package cdachyd;
+
+import in.cdac.hyd.*; // DAC
+import in.cdac.DASSD; // DASSD
+
 public class Test{
 	public static void main(String[] args) {
+		
+     //access DAC - implicit
+		DAC dac = new DAC(100, "PG-DAC");
+		dac.getDac();
 
-		Student s1 = new Student(123,"ABC",7.9,"DASSD");
-		s1.getStudent(); //123 ABC 7.9 DASSD C-DAC
+	 //access DAC - explicit
+        DASSD dassd = new DASSD(22, "PG-DASSD");
+        dassd.getDassd();
 
-		Student.changeOrg();  // Class Name
-
-		Student s2 = new Student(321,"XYZ",8.9,"DAC");
-		s2.getStudent(); //
-		     
+     // access using FQN
+       in.DBDA dbda = new in.DBDA(31,"PG-DBDA");
+       dbda.getDbda();   
+ 
 	}
-} 
+}
