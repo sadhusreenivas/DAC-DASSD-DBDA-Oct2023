@@ -1,32 +1,36 @@
-class Student{
-	int rno;
-	String name;
-	double gpa;
-	String course; // new data member
-	static String org; // null
-    // loading time
-	static {
-		// used initilaize the static members
-		org = "C-DAC";
-		System.out.println("This is static block");
+package collections;
+
+public class Student {
+
+	private int rno;
+	private String name;
+	private double gpa;
+	static String org = "C-DAC HYd";
+	
+	public Student(int rno, String name, double gpa) {
+		super();
+		this.rno = rno;
+		this.name = name;
+		this.gpa = gpa;
 	}
 
-    Student(int rno, String name, double gpa){  // local variables - instance
-    	this.name = name;
-    	this.rno = rno;
-    	this.gpa = gpa;
-    }
+	public int getRno() {
+		return rno;
+	}
 
-    Student(int rno, String name, double gpa,String course){
-    	this(rno,name,gpa); // must first statement
-    	this.course = course;
-    }
+	public String getName() {
+		return name;
+	}
 
-    void getStudent(){
-    	System.out.println(rno+" "+name+" "+gpa+" "+course+" "+org);
-    }
+	public double getGpa() {
+		return gpa;
+	}
 
-    static void changeOrg(){  // static method
-    	org = "C-DAC Hyd";
-    }
+	@Override
+	public String toString() {
+		return "Student:-> "+rno+"\t"+name+"\t"+gpa+"\t"+org;
+	}
+
 }
+
+
