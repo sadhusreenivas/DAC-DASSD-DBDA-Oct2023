@@ -8,7 +8,7 @@ public class Demo {
 	   // 1. Load the Driver or Registering the Driver
 		 Class.forName("com.mysql.cj.jdbc.Driver");  // Type 4 JDBC Driver 
 		 
-	   // 2. Estabishing the connection - 3 things
+	   // 2. Establishing the connection - 3 things
          String url = "jdbc:mysql://localhost:3306/world";
          String user = "root";
          String pwd = "root";
